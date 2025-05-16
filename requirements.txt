@@ -6,3 +6,10 @@ celery==5.3.4
 django-environ==0.11.2
 mysqlclient==2.2.0
 rabbitmq==0.2.0
+
+# Check if file exists and is not empty
+if [ -s "alx_travel_app/requirements.txt" ]; then
+    echo "requirements.txt exists and is not empty"
+else
+    echo "WARNING: requirements.txt is missing or empty"
+fi
