@@ -1,6 +1,12 @@
 from rest_framework import serializers
 from .models import Listing, Booking
 from django.contrib.auth import get_user_model
+from .models import Listing  # and other models you need
+
+class ListingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Listing
+        fields = '__all__'
 
 User = get_user_model()
 
